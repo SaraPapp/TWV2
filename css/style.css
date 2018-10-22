@@ -16,6 +16,77 @@ header {
     header .banner img {
       width: 100%; }
 
+/*variables*/
+body {
+  --stats-topcolumn-color: #74b46c;
+  --stats-bottomcolumn-color: #747474;
+  --stats-countrytxt-color: #808080;
+  --stats-marginright-size: 1%;
+  --stats-topcolumn-width: 100%;
+  --stats-country-fontsize: 0.875em;
+  --stats-percentage-fontsize: 0.75em;
+  --stats-percentageplus-color: #50a45d;
+  --stats-percentageminus-color: #535353;
+  --stats-country-fontfamily: 'Lato', sans-serif; }
+
+.stats {
+  display: block; }
+  .stats .data {
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin-right: var(--stats-marginright-size); }
+    .stats .data .bar-container {
+      height: 100px;
+      position: relative; }
+    .stats .data .topcolumn {
+      width: 50%;
+      float: right;
+      display: block;
+      background-color: var(--stats-topcolumn-color);
+      width: var(--stats-topcolumn-width);
+      height: 0;
+      position: absolute;
+      bottom: 0; }
+    .stats .data .country {
+      font-size: var(--stats-country-fontsize);
+      color: var(--stats-countrytxt-color);
+      font-family: var(--stats-country-fontfamily); }
+    .stats .data .CAcolumn {
+      width: 15%; }
+    .stats .data .MXcolumn {
+      width: 35%; }
+    .stats .data .GBcolumn {
+      width: 14%; }
+    .stats .data .BRcolumn {
+      height: 13%; }
+    .stats .data .DEcolumn {
+      height: 10%; }
+    .stats .data .AUcolumn {
+      height: 1%; }
+    .stats .data .JPcolumn {
+      height: 40%; }
+    .stats .data .ITcolumn {
+      height: 2%; }
+    .stats .data .CNcolumn {
+      height: 1%; }
+    .stats .data .FRcolumn {
+      height: 8%; }
+    .stats .data .TOTALcolumn {
+      height: 11%; }
+    .stats .data .percentage {
+      font-size: var(--stats-percentage-fontsize);
+      font-family: var(--stats-country-fontfamily);
+      font-weight: bold; }
+    .stats .data .percentageplus {
+      float: left;
+      color: var(--stats-percentageplus-color); }
+    .stats .data .percentageminus {
+      float: left;
+      color: var(--stats-percentageminus-color); }
+    .stats .data .bottomcolumn {
+      background-color: var(--stats-bottomcolumn-color); }
+
 #main {
   width: 100%;
   max-width: 1300px;
@@ -91,7 +162,8 @@ header {
     .traveldemand-container .whitesection .flight-booking {
       max-width: 260px;
       width: 100%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      overflow: hidden; }
       .traveldemand-container .whitesection .flight-booking .flight-text {
         width: 70%;
         float: left; }
@@ -118,17 +190,18 @@ header {
             color: var(--tw-fontcolor-lightgrey); }
         .traveldemand-container .whitesection .flight-booking .logo-section .logo img {
           width: 100%; }
-  .traveldemand-container .redbutton {
-    margin: 0 auto;
-    width: calc(100% - 40px);
-    height: 30px;
-    border-radius: 5px;
-    background-color: var(--tw-closebutton-color); }
-    .traveldemand-container .redbutton p {
-      margin: 0 auto;
+    .traveldemand-container .whitesection .redbutton {
+      display: block;
+      margin: 20px auto;
+      width: calc(100% - 40px);
+      height: 30px;
+      border-radius: 5px;
+      background-color: var(--tw-closebutton-color);
+      line-height: 30px;
       color: #ffffff;
       font-family: var(--tw-fontfamily-lato);
       text-align: center;
-      font-size: 0.813em; }
+      font-size: 0.813em;
+      text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,98 @@
+/*variables*/
+
+body {
+  --stats-topcolumn-color: #74b46c;
+  --stats-bottomcolumn-color: #747474;
+  --stats-countrytxt-color: #808080;
+  --stats-marginright-size: 1%;
+  --stats-topcolumn-width: 100%;
+  --stats-country-fontsize: 0.875em;
+  --stats-percentage-fontsize: 0.75em;
+  --stats-percentageplus-color: #50a45d;
+  --stats-percentageminus-color: #535353;
+  --stats-country-fontfamily: 'Lato', sans-serif;
+}
+
+.stats {
+  display: block;
+
+  .data {
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin-right: var(--stats-marginright-size);
+    .bar-container {
+      height: 100px;
+      position: relative;
+    }
+    .topcolumn {
+      width: 50%;
+      float: right;
+      display: block;
+      background-color: var(--stats-topcolumn-color);
+      width: var(--stats-topcolumn-width);
+      height: 0;
+      position: absolute;
+      bottom: 0;
+    }
+    .country {
+      font-size: var(--stats-country-fontsize);
+      color: var( --stats-countrytxt-color);
+      font-family: var(--stats-country-fontfamily);
+    }
+    .CAcolumn {
+      width: 15%;
+    }
+    .MXcolumn {
+      width: 35%;
+    }
+    .GBcolumn {
+      width: 14%;
+    }
+    .BRcolumn {
+      height: 13%;
+    }
+    .DEcolumn {
+      height: 10%;
+    }
+    .AUcolumn {
+      height: 1%;
+    }
+    .JPcolumn {
+      height: 40%;
+    }
+    .ITcolumn {
+      height: 2%;
+    }
+    .CNcolumn {
+      height: 1%;
+    }
+    .FRcolumn {
+      height: 8%;
+    }
+    .TOTALcolumn {
+      height: 11%;
+    }
+    .percentage {
+      font-size: var(--stats-percentage-fontsize);
+      font-family: var(--stats-country-fontfamily);
+      font-weight: bold;
+    }
+    .percentageplus {
+      float: left;
+      color: var(--stats-percentageplus-color);
+    }
+    .percentageminus {
+      float: left;
+      color: var(--stats-percentageminus-color);
+    }
+    .bottomcolumn {
+      background-color: var(--stats-bottomcolumn-color);
+    }
+
+  }
+}
+
+
+
+
