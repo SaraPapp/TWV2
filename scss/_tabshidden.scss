@@ -1,0 +1,191 @@
+.brown-container {
+  width: 100%;
+  background-color: #3f3433;
+  margin: 0 auto;
+  ul {
+    list-style-type: none;
+    li {
+      margin: 8px auto;
+      display: inline-block;
+      &:nth-child(n+4) {
+        display: none;
+      }
+      a {
+        font-family: var(--tw-fontfamily-lato);
+        font-size: 0.875em;
+        text-align: left;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        &.active {
+          font-weight: bold;
+          background-color: #fff;
+          color: #ca382b;
+        }
+      }
+    }
+  }
+}
+
+// Hidden container
+.tabcontent {
+  width: calc(100% - calc(var(--tw-content-padding) * 2));
+  max-width: 920px;
+  box-shadow: 0 22px 30px 0 rgba(32, 33, 47, 0.16);
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 9;
+  box-sizing: border-box;
+  display: none;
+  margin-bottom: 20px;
+  &.active {
+    display: block;
+  }
+}
+
+.whitesection {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  .bookings-text {
+    margin: 0 auto;
+    max-width: 260px;
+    width: 100%;
+    h3 {
+      width: 100%;
+      height: 36px;
+      font-family: var(--tw-fontfamily-lato);
+      font-size: 1em;
+      font-weight: bold;
+      text-align: center;
+      color: #3f3433;
+    }
+  }
+  .bookings-grey-text {
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    p {
+      text-align: center;
+      margin: 10px auto;
+      font-size: 0.750em;
+      font-family: var(--tw-fontfamily-lato);
+      color: var(--tw-fontcolor-lightgrey);
+    }
+  }
+  .flight-booking {
+    max-width: 260px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .flight-text {
+      width: 70%;
+      float: left;
+      p {
+        width: 100%;
+        margin: 0;
+        font-family: var(--tw-fontfamily-lato);
+        color: var(--tw-fontcolor-lightgrey);
+        font-size: 0.625em;
+        text-align: left;
+      }
+    }
+    .logo-section {
+      margin-left: 10px;
+      display: inline-block;
+      width: 25%;
+      float: left;
+      .poweredby {
+        width: 100%;
+        p {
+          margin: 0;
+          font-size: 0.563em;
+          font-style: italic;
+          text-align: center;
+          font-family: var(--tw-fontfamily-lato);
+          color: var(--tw-fontcolor-lightgrey);
+        }
+      }
+      .logo {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /* Notification button */
+  .button {
+    position: relative;
+
+    .notification {
+      //font-family: var(--tw-fontfamily-lato);
+      position: absolute;
+      right: 3%;
+      bottom: 70%;
+      color: #fff;
+      background-color: #ff8c00;
+      text-align: center;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0px 1px #808080;
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      -webkit-transition-duration: 0.5s;
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+
+    .notification:hover {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+      -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+      transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    }
+
+    /* Red CLOSE button */
+
+    .redbutton {
+      display: block;
+      margin: 20px auto;
+      width: calc(100% - 40px);
+      height: 30px;
+      border-radius: 5px;
+      background-color: var(--tw-closebutton-color);
+      line-height: 30px;
+      color: #ffffff;
+      font-family: var(--tw-fontfamily-lato);
+      text-align: center;
+      font-size: 0.813em;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .brown-container {
+    height: 50px;
+    float: left;
+    ul {
+      padding: 7px 0 0 0;
+      margin: 0;
+    }
+    ul li {
+      padding: 0 10px;
+      a {
+        font-size: 1em;
+      }
+    }
+  }
+  .brown-container ul li:nth-child(n+4) {
+    display: inline-block;
+  }
+  .tabcontent {
+    top: 100%;
+  }
+}

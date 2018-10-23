@@ -16,6 +16,9 @@ header {
     header .banner img {
       width: 100%; }
 
+@media screen and (min-width: 768px) {
+  header .banner {
+    width: 150px; } }
 /*variables*/
 /*variables*/
 body {
@@ -150,13 +153,6 @@ body {
         border-width: 0 5px 5px 5px;
         border-color: transparent transparent #97ccca transparent; }
 
-.main {
-  width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0px;
-  overflow-x: hidden; }
-
 /* Green - brown section*/
 .traveldemand-container {
   width: 100%;
@@ -164,8 +160,7 @@ body {
   margin: 0 auto;
   padding: 0 var(--tw-content-padding);
   box-sizing: border-box;
-  /* Traveldemand green section*/
-  /* brown container*/ }
+  /* Traveldemand green section*/ }
   .traveldemand-container .td-section {
     float: left;
     clear: none;
@@ -188,143 +183,204 @@ body {
       font-family: var(--tw-fontfamily-lato);
       font-size: 0.750em;
       font-style: italic;
-      line-height: 1.17;
+      line-height: 1.17em;
       text-align: center;
       color: #fff; }
       .traveldemand-container .td-section .description p {
         margin-top: 2px; }
-  .traveldemand-container .brown-container {
-    width: 100%;
-    background-color: #3f3433;
-    margin: 0 auto; }
-    .traveldemand-container .brown-container ul {
-      list-style-type: none; }
-      .traveldemand-container .brown-container ul li {
-        margin: 8px auto;
-        display: inline-block; }
-        .traveldemand-container .brown-container ul li:nth-child(n+4) {
-          display: none; }
-        .traveldemand-container .brown-container ul li a {
-          font-family: var(--tw-fontfamily-lato);
-          font-size: 0.875em;
-          text-align: left;
-          color: #fff;
-          text-decoration: none;
-          padding: 10px; }
-          .traveldemand-container .brown-container ul li a.active {
-            font-weight: bold;
-            background-color: #fff;
-            color: #ca382b; }
-  .traveldemand-container .tabcontent {
-    width: calc(100% - calc(var(--tw-content-padding) * 2));
-    max-width: 920px;
-    box-shadow: 0 22px 30px 0 rgba(32, 33, 47, 0.16);
-    background-color: #ffffff;
-    position: absolute;
-    z-index: 9;
-    box-sizing: border-box;
-    display: none;
-    margin-bottom: 20px; }
-    .traveldemand-container .tabcontent.active {
-      display: block; }
-  .traveldemand-container .whitesection {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    /* Notification button */ }
-    .traveldemand-container .whitesection .bookings-text {
-      margin: 0 auto;
-      max-width: 260px;
-      width: 100%; }
-      .traveldemand-container .whitesection .bookings-text h3 {
-        width: 100%;
-        height: 36px;
-        font-family: var(--tw-fontfamily-lato);
-        font-size: 1em;
-        font-weight: bold;
-        text-align: center;
-        color: #3f3433; }
-    .traveldemand-container .whitesection .bookings-grey-text {
-      width: calc(100% - 60px);
-      margin: 0 auto; }
-      .traveldemand-container .whitesection .bookings-grey-text p {
-        text-align: center;
-        margin: 10px auto;
-        font-size: 0.750em;
-        font-family: var(--tw-fontfamily-lato);
-        color: var(--tw-fontcolor-lightgrey); }
-    .traveldemand-container .whitesection .flight-booking {
-      max-width: 260px;
-      width: 100%;
-      margin: 0 auto;
-      overflow: hidden; }
-      .traveldemand-container .whitesection .flight-booking .flight-text {
-        width: 70%;
-        float: left; }
-        .traveldemand-container .whitesection .flight-booking .flight-text p {
-          width: 100%;
-          margin: 0;
-          font-family: var(--tw-fontfamily-lato);
-          color: var(--tw-fontcolor-lightgrey);
-          font-size: 0.625em;
-          text-align: left; }
-      .traveldemand-container .whitesection .flight-booking .logo-section {
-        margin-left: 10px;
-        display: inline-block;
-        width: 25%;
-        float: left; }
-        .traveldemand-container .whitesection .flight-booking .logo-section .poweredby {
-          width: 100%; }
-          .traveldemand-container .whitesection .flight-booking .logo-section .poweredby p {
-            margin: 0;
-            font-size: 0.563em;
-            font-style: italic;
-            text-align: center;
-            font-family: var(--tw-fontfamily-lato);
-            color: var(--tw-fontcolor-lightgrey); }
-        .traveldemand-container .whitesection .flight-booking .logo-section .logo img {
-          width: 100%; }
-    .traveldemand-container .whitesection .button {
-      position: relative;
-      /* Red CLOSE button */ }
-      .traveldemand-container .whitesection .button .notification {
-        position: absolute;
-        right: 3%;
-        bottom: 70%;
-        color: #fff;
-        background-color: #ff8c00;
-        text-align: center;
-        border-radius: 50%;
-        border: 2px solid white;
-        box-shadow: 0px 1px #808080;
-        width: 22px;
-        height: 22px;
-        line-height: 22px;
-        -webkit-transform: perspective(1px) translateZ(0);
-        transform: perspective(1px) translateZ(0);
-        -webkit-transition-duration: 0.5s; }
-        .traveldemand-container .whitesection .button .notification a {
-          text-decoration: none;
-          color: #fff; }
-      .traveldemand-container .whitesection .button .notification:hover {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-        -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-        transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36); }
-      .traveldemand-container .whitesection .button .redbutton {
-        display: block;
-        margin: 20px auto;
-        width: calc(100% - 40px);
-        height: 30px;
-        border-radius: 5px;
-        background-color: var(--tw-closebutton-color);
-        line-height: 30px;
-        color: #ffffff;
-        font-family: var(--tw-fontfamily-lato);
-        text-align: center;
-        font-size: 0.813em;
-        text-decoration: none; }
+    .traveldemand-container .td-section .images {
+      display: none; }
 
+@media all and (min-width: 768px) {
+  .traveldemand-container {
+    height: 100px;
+    position: relative; }
+    .traveldemand-container .td-section {
+      height: 50px;
+      position: relative; }
+      .traveldemand-container .td-section .tdimg {
+        width: 170px;
+        margin: 6px 20px;
+        float: left; }
+      .traveldemand-container .td-section .description {
+        width: calc(100% - 180px);
+        float: left;
+        text-align: left;
+        font-size: 0.875em;
+        padding: 16px 0; }
+      .traveldemand-container .td-section .images {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+        .traveldemand-container .td-section .images .passport {
+          position: absolute;
+          width: 60px;
+          height: 46px;
+          bottom: 1px;
+          right: 180px;
+          z-index: 5; }
+        .traveldemand-container .td-section .images .clouds {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 213px;
+          height: 50px; }
+        .traveldemand-container .td-section .images img {
+          width: 100%; } }
+.brown-container {
+  width: 100%;
+  background-color: #3f3433;
+  margin: 0 auto; }
+  .brown-container ul {
+    list-style-type: none; }
+    .brown-container ul li {
+      margin: 8px auto;
+      display: inline-block; }
+      .brown-container ul li:nth-child(n+4) {
+        display: none; }
+      .brown-container ul li a {
+        font-family: var(--tw-fontfamily-lato);
+        font-size: 0.875em;
+        text-align: left;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px; }
+        .brown-container ul li a.active {
+          font-weight: bold;
+          background-color: #fff;
+          color: #ca382b; }
+
+.tabcontent {
+  width: calc(100% - calc(var(--tw-content-padding) * 2));
+  max-width: 920px;
+  box-shadow: 0 22px 30px 0 rgba(32, 33, 47, 0.16);
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 9;
+  box-sizing: border-box;
+  display: none;
+  margin-bottom: 20px; }
+  .tabcontent.active {
+    display: block; }
+
+.whitesection {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  /* Notification button */ }
+  .whitesection .bookings-text {
+    margin: 0 auto;
+    max-width: 260px;
+    width: 100%; }
+    .whitesection .bookings-text h3 {
+      width: 100%;
+      height: 36px;
+      font-family: var(--tw-fontfamily-lato);
+      font-size: 1em;
+      font-weight: bold;
+      text-align: center;
+      color: #3f3433; }
+  .whitesection .bookings-grey-text {
+    width: calc(100% - 60px);
+    margin: 0 auto; }
+    .whitesection .bookings-grey-text p {
+      text-align: center;
+      margin: 10px auto;
+      font-size: 0.750em;
+      font-family: var(--tw-fontfamily-lato);
+      color: var(--tw-fontcolor-lightgrey); }
+  .whitesection .flight-booking {
+    max-width: 260px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden; }
+    .whitesection .flight-booking .flight-text {
+      width: 70%;
+      float: left; }
+      .whitesection .flight-booking .flight-text p {
+        width: 100%;
+        margin: 0;
+        font-family: var(--tw-fontfamily-lato);
+        color: var(--tw-fontcolor-lightgrey);
+        font-size: 0.625em;
+        text-align: left; }
+    .whitesection .flight-booking .logo-section {
+      margin-left: 10px;
+      display: inline-block;
+      width: 25%;
+      float: left; }
+      .whitesection .flight-booking .logo-section .poweredby {
+        width: 100%; }
+        .whitesection .flight-booking .logo-section .poweredby p {
+          margin: 0;
+          font-size: 0.563em;
+          font-style: italic;
+          text-align: center;
+          font-family: var(--tw-fontfamily-lato);
+          color: var(--tw-fontcolor-lightgrey); }
+      .whitesection .flight-booking .logo-section .logo img {
+        width: 100%; }
+  .whitesection .button {
+    position: relative;
+    /* Red CLOSE button */ }
+    .whitesection .button .notification {
+      position: absolute;
+      right: 3%;
+      bottom: 70%;
+      color: #fff;
+      background-color: #ff8c00;
+      text-align: center;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0px 1px #808080;
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      -webkit-transition-duration: 0.5s; }
+      .whitesection .button .notification a {
+        text-decoration: none;
+        color: #fff; }
+    .whitesection .button .notification:hover {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+      -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+      transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36); }
+    .whitesection .button .redbutton {
+      display: block;
+      margin: 20px auto;
+      width: calc(100% - 40px);
+      height: 30px;
+      border-radius: 5px;
+      background-color: var(--tw-closebutton-color);
+      line-height: 30px;
+      color: #ffffff;
+      font-family: var(--tw-fontfamily-lato);
+      text-align: center;
+      font-size: 0.813em;
+      text-decoration: none; }
+
+@media screen and (min-width: 768px) {
+  .brown-container {
+    height: 50px;
+    float: left; }
+    .brown-container ul {
+      padding: 7px 0 0 0;
+      margin: 0; }
+    .brown-container ul li {
+      padding: 0 10px; }
+      .brown-container ul li a {
+        font-size: 1em; }
+
+  .brown-container ul li:nth-child(n+4) {
+    display: inline-block; }
+
+  .tabcontent {
+    top: 100%; } }
 /* article section */
 .article-container {
   float: left;
@@ -350,5 +406,11 @@ body {
     text-align: center; }
     .article-container .article-text p {
       font-size: 1em; }
+
+.main {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0px; }
 
 /*# sourceMappingURL=style.css.map */

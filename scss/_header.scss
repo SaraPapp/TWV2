@@ -12,3 +12,9 @@ header {
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  header .banner{
+  width: 150px;
+  }
+}

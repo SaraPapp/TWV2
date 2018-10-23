@@ -1,0 +1,31 @@
+/* article section */
+.article-container {
+  float: left;
+  clear: none;
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  background-color: #D0B9B9;
+  .title {
+    margin: 0 auto;
+    p {
+      font-size: 1.6em;
+    }
+  }
+  .article-image {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .article-text {
+    max-width: 250px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    p {
+      font-size: 1em;
+    }
+  }
+}

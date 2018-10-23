@@ -1,0 +1,97 @@
+/* Green - brown section*/
+
+.traveldemand-container {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 var(--tw-content-padding);
+  box-sizing: border-box;
+
+  /* Traveldemand green section*/
+
+  .td-section {
+    float: left;
+    clear: none;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    background: rgb(126, 210, 218);
+    background: linear-gradient(90deg, rgba(126, 210, 218, 1) 0%, rgba(142, 188, 148, 1) 100%);
+
+    .tdimg {
+      max-width: 138px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      object-fit: contain;
+      img {
+        padding-top: 10px;
+        width: 100%;
+      }
+    }
+    .description {
+      width: 100%;
+      font-family: var(--tw-fontfamily-lato);
+      font-size: 0.750em;
+      font-style: italic;
+      line-height: 1.17em;
+      text-align: center;
+      color: #fff;
+      p {
+        margin-top: 2px;
+      }
+    }
+    .images {
+      display: none;
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .traveldemand-container {
+    height: 100px;
+    position: relative;
+    .td-section {
+      height: 50px;
+      position: relative;
+      .tdimg {
+        width: 170px;
+        margin: 6px 20px;
+        float: left;
+      }
+      .description {
+        width: calc(100% - 180px);
+        float: left;
+        text-align: left;
+        font-size: 0.875em;
+        padding: 16px 0;
+      }
+      .images {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        .passport {
+          position: absolute;
+          width: 60px;
+          height: 46px;
+          bottom: 1px;
+          right: 180px;
+          z-index: 5;
+        }
+        .clouds {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 213px;
+          height: 50px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
