@@ -10,12 +10,42 @@ body {
 @import 'header';
 @import 'hiddenstats';
 
-#main {
+.main {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
   padding: 0px;
   overflow-x: hidden;
+}
+
+.td-section {
+  width: 100%;
+  background: rgb(126, 210, 218);
+  background: linear-gradient(90deg, rgba(126, 210, 218, 1) 0%, rgba(142, 188, 148, 1) 100%);
+
+  .tdimg {
+    max-width: 138px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    img {
+      padding-top: 10px;
+      width: 100%;
+    }
+  }
+  .description {
+    width: 100%;
+    font-family: var(--tw-fontfamily-lato);
+    font-size: 0.750em;
+    font-style: italic;
+    line-height: 1.17;
+    text-align: center;
+    color: #fff;
+    p {
+      margin-top: 2px;
+      padding-bottom: 10px;
+    }
+  }
 }
 
 .traveldemand-container {
@@ -75,6 +105,7 @@ body {
     height: 100%;
     box-sizing: border-box;
     .bookings-text {
+      margin: 0 auto;
       max-width: 260px;
       width: 100%;
       h3 {
@@ -92,7 +123,7 @@ body {
       margin: 0 auto;
       p {
         text-align: center;
-        margin: 0;
+        margin: 10px auto;
         font-size: 0.750em;
         font-family: var(--tw-fontfamily-lato);
         color: var(--tw-fontcolor-lightgrey);
@@ -140,19 +171,52 @@ body {
       }
     }
 
-    .redbutton {
-      display: block;
-      margin: 20px auto;
-      width: calc(100% - 40px);
-      height: 30px;
-      border-radius: 5px;
-      background-color: var(--tw-closebutton-color);
-      line-height: 30px;
-      color: #ffffff;
-      font-family: var(--tw-fontfamily-lato);
-      text-align: center;
-      font-size: 0.813em;
-      text-decoration: none;
+    /* Notification button */
+    .button {
+      position: relative;
+
+      .notification {
+       // font-family: var(--tw-fontfamily-lato);
+        position: absolute;
+        right: 3%;
+        bottom: 70%;
+        color: #fff;
+        background-color: #ff8c00;
+        text-align: center;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0px 2px #808080;
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        -webkit-transition-duration: 0.5s;
+      }
+
+      .notification:hover {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+      }
+
+      /* Red CLOSE button */
+
+      .redbutton {
+        display: block;
+        margin: 20px auto;
+        width: calc(100% - 40px);
+        height: 30px;
+        border-radius: 5px;
+        background-color: var(--tw-closebutton-color);
+        line-height: 30px;
+        color: #ffffff;
+        font-family: var(--tw-fontfamily-lato);
+        text-align: center;
+        font-size: 0.813em;
+        text-decoration: none;
+      }
     }
   }
 }

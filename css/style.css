@@ -87,12 +87,36 @@ body {
     .stats .data .bottomcolumn {
       background-color: var(--stats-bottomcolumn-color); }
 
-#main {
+.main {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
   padding: 0px;
   overflow-x: hidden; }
+
+.td-section {
+  width: 100%;
+  background: #7ed2da;
+  background: linear-gradient(90deg, #7ed2da 0%, #8ebc94 100%); }
+  .td-section .tdimg {
+    max-width: 138px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto; }
+    .td-section .tdimg img {
+      padding-top: 10px;
+      width: 100%; }
+  .td-section .description {
+    width: 100%;
+    font-family: var(--tw-fontfamily-lato);
+    font-size: 0.750em;
+    font-style: italic;
+    line-height: 1.17;
+    text-align: center;
+    color: #fff; }
+    .td-section .description p {
+      margin-top: 2px;
+      padding-bottom: 10px; }
 
 .traveldemand-container {
   width: 100%;
@@ -138,8 +162,10 @@ body {
   .traveldemand-container .whitesection {
     width: 100%;
     height: 100%;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    /* Notification button */ }
     .traveldemand-container .whitesection .bookings-text {
+      margin: 0 auto;
       max-width: 260px;
       width: 100%; }
       .traveldemand-container .whitesection .bookings-text h3 {
@@ -155,7 +181,7 @@ body {
       margin: 0 auto; }
       .traveldemand-container .whitesection .bookings-grey-text p {
         text-align: center;
-        margin: 0;
+        margin: 10px auto;
         font-size: 0.750em;
         font-family: var(--tw-fontfamily-lato);
         color: var(--tw-fontcolor-lightgrey); }
@@ -190,18 +216,42 @@ body {
             color: var(--tw-fontcolor-lightgrey); }
         .traveldemand-container .whitesection .flight-booking .logo-section .logo img {
           width: 100%; }
-    .traveldemand-container .whitesection .redbutton {
-      display: block;
-      margin: 20px auto;
-      width: calc(100% - 40px);
-      height: 30px;
-      border-radius: 5px;
-      background-color: var(--tw-closebutton-color);
-      line-height: 30px;
-      color: #ffffff;
-      font-family: var(--tw-fontfamily-lato);
-      text-align: center;
-      font-size: 0.813em;
-      text-decoration: none; }
+    .traveldemand-container .whitesection .button {
+      position: relative;
+      /* Red CLOSE button */ }
+      .traveldemand-container .whitesection .button .notification {
+        position: absolute;
+        right: 3%;
+        bottom: 70%;
+        color: #fff;
+        background-color: #ff8c00;
+        text-align: center;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0px 2px #808080;
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        -webkit-transition-duration: 0.5s; }
+      .traveldemand-container .whitesection .button .notification:hover {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36); }
+      .traveldemand-container .whitesection .button .redbutton {
+        display: block;
+        margin: 20px auto;
+        width: calc(100% - 40px);
+        height: 30px;
+        border-radius: 5px;
+        background-color: var(--tw-closebutton-color);
+        line-height: 30px;
+        color: #ffffff;
+        font-family: var(--tw-fontfamily-lato);
+        text-align: center;
+        font-size: 0.813em;
+        text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */
