@@ -1,5 +1,7 @@
 /*variables*/
 
+/*variables*/
+
 body {
   --stats-topcolumn-color: #74b46c;
   --stats-bottomcolumn-color: #747474;
@@ -15,31 +17,99 @@ body {
 
 .stats {
   display: block;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
 
   .data {
     display: block;
-    width: 50%;
+    width: 100%;
     text-align: center;
     margin-right: var(--stats-marginright-size);
+    overflow: visible;
     .bar-container {
-      height: 100px;
+      height: 25px;
       position: relative;
-    }
-    .topcolumn {
-      width: 50%;
       float: right;
+      width: 37%;
+      &.left {
+        width: 20%;
+      }
+    }
+
+    .title-container {
+      float: right;
+      height: 25px;
+      width: 33%;
+    }
+
+    .topcolumn {
       display: block;
       background-color: var(--stats-topcolumn-color);
       width: var(--stats-topcolumn-width);
-      height: 0;
-      position: absolute;
-      bottom: 0;
+      height: 20px;
+      margin: 3.5px 0;
+      width: 0;
+    }
+    .bottomcolumn {
+      background-color: var(--stats-bottomcolumn-color);
+      float: right;
+      height: 15px;
+      margin: 3.5px 0;
+      width: 0;
     }
     .country {
+      width: 50%;
+      float: right;
+      margin: 0;
+      line-height: 25px;
       font-size: var(--stats-country-fontsize);
-      color: var( --stats-countrytxt-color);
+      color: var(--stats-countrytxt-color);
       font-family: var(--stats-country-fontfamily);
     }
+
+    .tooltip {
+      position: relative;
+      .tooltiptext {
+        z-index: 8;
+        margin-top: -25px;
+        left: 44%;
+        width: 63.5px;
+        height: auto;
+        position: absolute;
+        border-radius: 34px;
+        box-shadow: 4px 2px 5px 0 rgba(0, 0, 0, 0.09);
+        background-color: #97ccca;
+        visibility: hidden;
+        text-align: center;
+        padding: 5px 0;
+        font-family: var(--stats-country-fontfamily);
+        font-size: 0.750em;
+        text-align: center;
+        color: #ffffff;
+        &.big {
+          width: 87.5px;
+          left: 31%;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0;
+          bottom: -5px;
+          left: calc(50% - 5px);
+          border-style: solid;
+          border-width: 5px 5px 0 5px;
+          border-color: #97ccca transparent transparent transparent;
+        }
+      }
+      &:hover .tooltiptext {
+        visibility: visible;
+      }
+
+    }
+
     .CAcolumn {
       width: 15%;
     }
@@ -50,49 +120,58 @@ body {
       width: 14%;
     }
     .BRcolumn {
-      height: 13%;
+      width: 13%;
     }
     .DEcolumn {
-      height: 10%;
+      width: 10%;
     }
     .AUcolumn {
-      height: 1%;
+      width: 1%;
     }
     .JPcolumn {
-      height: 40%;
+      width: 40%;
     }
     .ITcolumn {
-      height: 2%;
+      width: 2%;
     }
     .CNcolumn {
-      height: 1%;
+      width: 1%;
     }
     .FRcolumn {
-      height: 8%;
+      width: 8%;
     }
     .TOTALcolumn {
-      height: 11%;
+      width: 11%;
     }
     .percentage {
       font-size: var(--stats-percentage-fontsize);
       font-family: var(--stats-country-fontfamily);
       font-weight: bold;
-    }
-    .percentageplus {
-      float: left;
-      color: var(--stats-percentageplus-color);
-    }
-    .percentageminus {
-      float: left;
-      color: var(--stats-percentageminus-color);
-    }
-    .bottomcolumn {
-      background-color: var(--stats-bottomcolumn-color);
+      width: 35%;
+      float: right;
+      margin: 0;
+      line-height: 25px;
+
+      &.percentageplus {
+        color: var(--stats-percentageplus-color);
+      }
+      &.percentageminus {
+        color: var(--stats-percentageminus-color);
+      }
     }
 
+
+    &:first-of-type .tooltip .tooltiptext{
+      margin-top: 25px;
+
+      &::after {
+
+        bottom: 100%;
+        border-style: solid;
+        border-width: 0 5px 5px 5px;
+        border-color:  transparent transparent #97ccca transparent;
+      }
+    }
   }
+
 }
-
-
-
-

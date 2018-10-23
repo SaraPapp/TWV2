@@ -1,10 +1,18 @@
 $(document).ready(function () {
     // hide if clicked outside
-    $(window).click(function () {
-        $(".countrybutton.active").removeClass("active");
-        $(".tabcontent.active").removeClass("active");
+    $(window).click(function (event) {
+        if($(event.target).parents('.tabcontent').length == 0) {
+            $(".countrybutton.active").removeClass("active");
+            $(".tabcontent.active").removeClass("active");
+        }
     });
-
+$(".redbutton").click(function(event) {
+    event.preventDefault(); // stop browser going to the link in the button
+    event.stopPropagation();
+    $(".countrybutton.active").removeClass("active");
+    $(".tabcontent").removeClass("active");
+    }
+)
     // detect click on button
     $(".countrybutton").click(function (event) {
         event.preventDefault(); // stop browser going to the link in the button
