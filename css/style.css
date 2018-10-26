@@ -82,7 +82,7 @@ body {
       .stats .data .tooltip .tooltiptext {
         z-index: 8;
         margin-top: -25px;
-        left: 44%;
+        left: calc(75% - 31.75px);
         width: 63.5px;
         height: auto;
         position: absolute;
@@ -153,6 +153,83 @@ body {
         border-width: 0 5px 5px 5px;
         border-color: transparent transparent #97ccca transparent; }
 
+@media all and (min-width: 768px) {
+  .stats {
+    display: block;
+    max-width: inherit;
+    width: 100%;
+    margin: -20px auto;
+    overflow: visible; }
+    .stats .data {
+      display: inline-block;
+      width: calc(8.25% - var(--stats-marginright-size));
+      text-align: center;
+      margin-right: var(--stats-marginright-size);
+      overflow: visible; }
+      .stats .data .bar-container {
+        width: 100%;
+        height: 100px;
+        position: relative;
+        float: left; }
+        .stats .data .bar-container.left {
+          width: 100%; }
+      .stats .data .title-container {
+        width: 100%;
+        height: 62px; }
+        .stats .data .title-container .tooltip .tooltiptext {
+          left: calc(50% - 31.75px); }
+          .stats .data .title-container .tooltip .tooltiptext.big {
+            left: calc(50% - 43.75px); }
+        .stats .data .title-container .country,
+        .stats .data .title-container .percentage {
+          height: 31px;
+          width: 100%;
+          text-align: center; }
+      .stats .data .topcolumn {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        max-width: 28px;
+        height: 0;
+        left: calc(50% - 14px); }
+      .stats .data .bottomcolumn {
+        position: absolute;
+        display: block;
+        width: 100%;
+        max-width: 28px;
+        height: 0;
+        left: calc(50% - 14px); }
+      .stats .data .country {
+        float: left; }
+      .stats .data .CAcolumn {
+        height: 15%; }
+      .stats .data .MXcolumn {
+        height: 35%; }
+      .stats .data .GBcolumn {
+        height: 14%; }
+      .stats .data .BRcolumn {
+        height: 13%; }
+      .stats .data .DEcolumn {
+        height: 10%; }
+      .stats .data .AUcolumn {
+        height: 1%; }
+      .stats .data .JPcolumn {
+        height: 40%; }
+      .stats .data .ITcolumn {
+        height: 2%; }
+      .stats .data .CNcolumn {
+        height: 1%; }
+      .stats .data .FRcolumn {
+        height: 8%; }
+      .stats .data .TOTALcolumn {
+        height: 11%; }
+      .stats .data:first-of-type .tooltip .tooltiptext {
+        margin-top: -25px; }
+        .stats .data:first-of-type .tooltip .tooltiptext::after {
+          bottom: -5px;
+          border-width: 5px 5px 0 5px;
+          border-color: #97ccca transparent transparent transparent; } }
 /* Green - brown section*/
 .traveldemand-container {
   width: 100%;
@@ -233,21 +310,28 @@ body {
 .brown-container {
   width: 100%;
   background-color: #3f3433;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 30px;
+  height: 100%;
+  overflow: hidden;
+  overflow-x: scroll; }
+  .brown-container .inside {
+    width: 600px; }
   .brown-container ul {
-    list-style-type: none; }
+    margin: 0;
+    list-style-type: none;
+    width: 100%; }
     .brown-container ul li {
       margin: 8px auto;
       display: inline-block; }
-      .brown-container ul li:nth-child(n+4) {
-        display: none; }
       .brown-container ul li a {
         font-family: var(--tw-fontfamily-lato);
         font-size: 0.875em;
         text-align: left;
         color: #fff;
         text-decoration: none;
-        padding: 10px; }
+        padding: 10px;
+        margin-right: 12px; }
         .brown-container ul li a.active {
           font-weight: bold;
           background-color: #fff;
@@ -255,7 +339,7 @@ body {
 
 .tabcontent {
   width: calc(100% - calc(var(--tw-content-padding) * 2));
-  max-width: 920px;
+  max-width: 940px;
   box-shadow: 0 22px 30px 0 rgba(32, 33, 47, 0.16);
   background-color: #ffffff;
   position: absolute;
@@ -265,122 +349,280 @@ body {
   margin-bottom: 20px; }
   .tabcontent.active {
     display: block; }
-
-.whitesection {
-  width: 100%;
-  overflow: hidden;
-  box-sizing: border-box;
-  /* Notification button */ }
-  .whitesection .bookings-text {
-    margin: 0 auto;
-    max-width: 260px;
-    width: 100%; }
-    .whitesection .bookings-text h3 {
-      width: 100%;
-      height: 36px;
-      font-family: var(--tw-fontfamily-lato);
-      font-size: 1em;
-      font-weight: bold;
-      text-align: center;
-      color: #3f3433; }
-  .whitesection .bookings-grey-text {
-    width: calc(100% - 60px);
-    margin: 0 auto; }
-    .whitesection .bookings-grey-text p {
-      text-align: center;
-      margin: 10px auto;
-      font-size: 0.750em;
-      font-family: var(--tw-fontfamily-lato);
-      color: var(--tw-fontcolor-lightgrey); }
-  .whitesection .flight-booking {
-    max-width: 260px;
+  .tabcontent .greensection {
+    display: none; }
+  .tabcontent .whitesection {
+    float: left;
     width: 100%;
-    margin: 0 auto;
-    overflow: hidden; }
-    .whitesection .flight-booking .flight-text {
-      width: 70%;
-      float: left; }
-      .whitesection .flight-booking .flight-text p {
+    overflow: hidden;
+    box-sizing: border-box;
+    /* Notification button */ }
+    .tabcontent .whitesection .bookings-text {
+      margin: 0 auto;
+      max-width: 260px;
+      width: 100%; }
+      .tabcontent .whitesection .bookings-text h3 {
         width: 100%;
-        margin: 0;
+        height: 36px;
         font-family: var(--tw-fontfamily-lato);
-        color: var(--tw-fontcolor-lightgrey);
-        font-size: 0.625em;
-        text-align: left; }
-    .whitesection .flight-booking .logo-section {
-      margin-left: 10px;
-      display: inline-block;
-      width: 25%;
-      float: left; }
-      .whitesection .flight-booking .logo-section .poweredby {
-        width: 100%; }
-        .whitesection .flight-booking .logo-section .poweredby p {
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+        color: #3f3433; }
+    .tabcontent .whitesection .bookings-grey-text {
+      width: calc(100% - 60px);
+      margin: 0 auto; }
+      .tabcontent .whitesection .bookings-grey-text p {
+        text-align: center;
+        margin: 10px auto;
+        font-size: 0.750em;
+        font-family: var(--tw-fontfamily-lato);
+        color: var(--tw-fontcolor-lightgrey); }
+    .tabcontent .whitesection .flight-booking {
+      max-width: 260px;
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden; }
+      .tabcontent .whitesection .flight-booking .flight-text {
+        width: 70%;
+        float: left; }
+        .tabcontent .whitesection .flight-booking .flight-text p {
+          width: 100%;
           margin: 0;
-          font-size: 0.563em;
-          font-style: italic;
-          text-align: center;
           font-family: var(--tw-fontfamily-lato);
-          color: var(--tw-fontcolor-lightgrey); }
-      .whitesection .flight-booking .logo-section .logo img {
-        width: 100%; }
-  .whitesection .button {
-    position: relative;
-    /* Red CLOSE button */ }
-    .whitesection .button .notification {
-      position: absolute;
-      right: 3%;
-      bottom: 70%;
-      color: #fff;
-      background-color: #ff8c00;
-      text-align: center;
-      border-radius: 50%;
-      border: 2px solid white;
-      box-shadow: 0px 1px #808080;
-      width: 22px;
-      height: 22px;
-      line-height: 22px;
-      -webkit-transform: perspective(1px) translateZ(0);
-      transform: perspective(1px) translateZ(0);
-      -webkit-transition-duration: 0.5s; }
-      .whitesection .button .notification a {
+          color: var(--tw-fontcolor-lightgrey);
+          font-size: 0.625em;
+          text-align: left; }
+      .tabcontent .whitesection .flight-booking .logo-section {
+        margin-left: 10px;
+        display: inline-block;
+        width: 25%;
+        float: left; }
+        .tabcontent .whitesection .flight-booking .logo-section .poweredby {
+          width: 100%; }
+          .tabcontent .whitesection .flight-booking .logo-section .poweredby p {
+            margin: 0;
+            font-size: 0.563em;
+            font-style: italic;
+            text-align: center;
+            font-family: var(--tw-fontfamily-lato);
+            color: var(--tw-fontcolor-lightgrey); }
+        .tabcontent .whitesection .flight-booking .logo-section .logo img {
+          width: 100%; }
+    .tabcontent .whitesection .button {
+      position: relative;
+      /* Red CLOSE button */ }
+      .tabcontent .whitesection .button .notification {
+        position: absolute;
+        right: 3%;
+        bottom: 70%;
+        color: #fff;
+        background-color: #ff8c00;
+        text-align: center;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0px 1px #808080;
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        -webkit-transition-duration: 0.5s; }
+        .tabcontent .whitesection .button .notification a {
+          text-decoration: none;
+          color: #fff; }
+      .tabcontent .whitesection .button .notification:hover {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36); }
+      .tabcontent .whitesection .button .redbutton {
+        display: block;
+        margin: 20px auto;
+        width: calc(100% - 40px);
+        height: 30px;
+        border-radius: 5px;
+        background-color: var(--tw-closebutton-color);
+        line-height: 30px;
+        color: #ffffff;
+        font-family: var(--tw-fontfamily-lato);
+        text-align: center;
+        font-size: 0.813em;
         text-decoration: none;
-        color: #fff; }
-    .whitesection .button .notification:hover {
-      -webkit-transform: scale(1.2);
-      transform: scale(1.2);
-      -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-      transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36); }
-    .whitesection .button .redbutton {
-      display: block;
-      margin: 20px auto;
-      width: calc(100% - 40px);
-      height: 30px;
-      border-radius: 5px;
-      background-color: var(--tw-closebutton-color);
-      line-height: 30px;
-      color: #ffffff;
-      font-family: var(--tw-fontfamily-lato);
-      text-align: center;
-      font-size: 0.813em;
-      text-decoration: none; }
+        position: relative; }
 
 @media screen and (min-width: 768px) {
   .brown-container {
-    height: 50px;
-    float: left; }
+    max-height: 50px;
+    float: left;
+    height: 100%;
+    overflow-x: hidden; }
+    .brown-container .inside {
+      width: 100%; }
     .brown-container ul {
       padding: 7px 0 0 0;
       margin: 0; }
     .brown-container ul li {
       padding: 0 10px; }
       .brown-container ul li a {
-        font-size: 1em; }
-
-  .brown-container ul li:nth-child(n+4) {
-    display: inline-block; }
+        margin-right: 0;
+        font-size: 1em;
+        padding: 17px; }
 
   .tabcontent {
-    top: 100%; } }
+    top: 100%;
+    max-width: 1260px;
+    width: calc(100% - calc(var(--tw-content-padding) * 2)); }
+    .tabcontent .whitesection {
+      width: 68%;
+      padding: 0 5%; }
+      .tabcontent .whitesection .bookings-text {
+        max-width: 300px;
+        margin: 30px auto 0 auto; }
+      .tabcontent .whitesection .bookings-grey-text {
+        width: calc(100% - 90px);
+        margin: 0 auto; }
+        .tabcontent .whitesection .bookings-grey-text p {
+          font-size: 0.875em; }
+      .tabcontent .whitesection .button .redbutton {
+        width: 100%;
+        max-width: 150px; }
+      .tabcontent .whitesection .notification {
+        bottom: -11px; }
+      .tabcontent .whitesection .flight-booking .flight-text {
+        display: none; }
+      .tabcontent .whitesection .flight-booking .logo-section {
+        display: none; }
+    .tabcontent .greensection {
+      overflow: hidden;
+      display: block;
+      position: relative;
+      max-width: 300px;
+      height: 443px;
+      width: 31.9%;
+      float: right;
+      background: #7ed2da;
+      background: linear-gradient(129deg, #7ed2da 0%, #81c188 100%); }
+      .tabcontent .greensection .topography {
+        height: 100%;
+        max-height: 455px; }
+        .tabcontent .greensection .topography img {
+          height: 100%; }
+      .tabcontent .greensection .greentext {
+        position: absolute;
+        max-width: 199px;
+        width: 100%;
+        max-height: 120px;
+        font-family: var(--tw-fontfamily-lato);
+        font-size: 0.813em;
+        font-weight: bold;
+        line-height: 1.47;
+        text-align: right;
+        color: #ffffff;
+        top: 5%;
+        right: 10%; }
+      .tabcontent .greensection .plane {
+        position: absolute;
+        left: -50px;
+        top: calc(50% - 111px);
+        z-index: 10;
+        height: 222px; }
+        .tabcontent .greensection .plane .tablet-plane {
+          display: block;
+          height: 100%; }
+      .tabcontent .greensection .planeshadow {
+        position: absolute;
+        bottom: 40%;
+        left: 25%;
+        object-fit: contain;
+        opacity: 0.9;
+        z-index: 0;
+        max-width: 37px;
+        max-height: 34px; }
+        .tabcontent .greensection .planeshadow img {
+          width: 100%; }
+      .tabcontent .greensection .poweredfooter {
+        position: absolute;
+        bottom: 10%;
+        left: calc(50% - 60px);
+        max-width: 120px; }
+      .tabcontent .greensection .poweredby {
+        width: 100%;
+        float: left; }
+        .tabcontent .greensection .poweredby p {
+          text-align: center;
+          width: 100%;
+          font-family: var(--tw-fontfamily-lato);
+          font-size: 0.750em;
+          font-weight: bold;
+          font-style: italic;
+          text-align: center;
+          color: #ffffff;
+          margin: 0;
+          padding-left: 8px; }
+      .tabcontent .greensection .forwardkeys {
+        float: left;
+        width: 100%; }
+        .tabcontent .greensection .forwardkeys img {
+          width: 100%; }
+      .tabcontent .greensection .cloud {
+        position: absolute;
+        right: 0;
+        bottom: -1%;
+        max-width: 140px; }
+        .tabcontent .greensection .cloud img {
+          width: 100%; } }
+@media screen and (min-width: 940px) {
+  .traveldemand-container,
+  header {
+    max-width: 1260px; }
+
+  .tabcontent {
+    max-height: 340px; }
+    .tabcontent .brown-container {
+      overflow-x: hidden; }
+      .tabcontent .brown-container ul li a {
+        padding: 17px 8px; }
+        .tabcontent .brown-container ul li a.active {
+          padding: 20px; }
+    .tabcontent .whitesection {
+      width: 64%;
+      padding: 0 111.5px;
+      position: relative;
+      overflow: visible; }
+      .tabcontent .whitesection .button {
+        display: none; }
+      .tabcontent .whitesection .bookings-grey-text {
+        position: absolute;
+        bottom: -14px;
+        width: 100%;
+        left: 0; }
+    .tabcontent .greensection {
+      height: 340px;
+      max-width: 450px;
+      width: 35.7%; }
+      .tabcontent .greensection .topography {
+        height: 100%; }
+      .tabcontent .greensection .greentext {
+        max-width: 260px;
+        font-size: 0.938em; }
+      .tabcontent .greensection .plane {
+        top: 59px;
+        left: 0; }
+      .tabcontent .greensection .planeshadow {
+        bottom: 37%; }
+      .tabcontent .greensection .poweredfooter {
+        bottom: 20.3%;
+        left: calc(50% - 60px); }
+      .tabcontent .greensection .cloud {
+        max-width: 227px;
+        bottom: -5px; } }
+@media screen and (min-width: 940px) and (max-width: 1046px) {
+  .tabcontent .whitesection {
+    padding: 0 5%; } }
+@media screen and (min-width: 940px) and (max-width: 1117px) {
+  .tabcontent .greensection .greentext {
+    max-width: 200px; } }
 /* article section */
 .article-container {
   float: left;

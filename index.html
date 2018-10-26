@@ -27,14 +27,22 @@
             </div>
             <!-- Brown nav section -->
             <section class="brown-container">
-                <ul>
-                    <li><a class="countrybutton" href="#australia">Australia</a></li>
-                    <li><a class="countrybutton" href="#qatar">Qatar</a></li>
-                    <li><a class="countrybutton" href="#hong-kong">Hong Kong</a></li>
-                    <li><a class="countrybutton" href="#india">India</a></li>
-                    <li><a class="countrybutton" href="#netherlands">Netherlands</a></li>
-                    <li><a class="countrybutton" href="#new-zealand">New Zealand</a></li>
-                </ul>
+                <div class="inside">
+                    <ul>
+                        <li><a class="countrybutton" href="#australia" data-values="[15,35,14,13,-10,1,40,-2,-1,-8]">Australia</a>
+                        </li>
+                        <li><a class="countrybutton" href="#qatar" data-values="[-3,10,29,69,-2,50,100,-50,-22,-7]">Qatar</a>
+                        </li>
+                        <li><a class="countrybutton" href="#hong-kong" data-values="[45,-45,7,98,-3,6,-55,56,-8,0]">Hong
+                            Kong</a></li>
+                        <li><a class="countrybutton" href="#india"
+                               data-values="[15,35,14,13,-10,1,40,-2,-1,-8]">India</a></li>
+                        <li><a class="countrybutton" href="#netherlands" data-values="[15,35,14,13,-10,1,40,-2,-1,-8]">Netherlands</a>
+                        </li>
+                        <li><a class="countrybutton" href="#new-zealand" data-values="[15,35,14,13,-10,1,40,-2,-1,-8]">New
+                            Zealand</a></li>
+                    </ul>
+                </div>
             </section>
 
             <!-- Hidden container -->
@@ -95,7 +103,7 @@
                             </div>
                             <div class="title-container">
                                 <div class="tooltip">
-                                <p class="country">BR</p>
+                                    <p class="country">BR</p>
                                     <span class="tooltiptext">Brazil</span>
                                 </div>
                                 <p class="percentage percentageplus">+13%</p>
@@ -110,7 +118,7 @@
                             </div>
                             <div class="title-container">
                                 <div class="tooltip">
-                                <p class="country">DE</p>
+                                    <p class="country">DE</p>
                                     <span class="tooltiptext">Germany</span>
                                 </div>
                                 <p class="percentage percentageminus">-10%</p>
@@ -125,7 +133,7 @@
                             </div>
                             <div class="title-container">
                                 <div class="tooltip">
-                                <p class="country">AU</p>
+                                    <p class="country">AU</p>
                                     <span class="tooltiptext">Australia</span>
                                 </div>
                                 <p class="percentage percentageplus">+1%</p>
@@ -140,7 +148,7 @@
                             </div>
                             <div class="title-container">
                                 <div class="tooltip">
-                                <p class="country">JP</p>
+                                    <p class="country">JP</p>
                                     <span class="tooltiptext">Japan</span>
                                 </div>
                                 <p class="percentage percentageplus">+40%</p>
@@ -155,7 +163,7 @@
                             </div>
                             <div class="title-container">
                                 <div class="tooltip">
-                                <p class="country">IT</p>
+                                    <p class="country">IT</p>
                                     <span class="tooltiptext">Italy</span>
                                 </div>
                                 <p class="percentage percentageminus">-2%</p>
@@ -170,7 +178,7 @@
                             </div>
                             <div class="title-container">
                                 <div class="tooltip">
-                                <p class="country">CN</p>
+                                    <p class="country">CN</p>
                                     <span class="tooltiptext">China</span>
                                 </div>
                                 <p class="percentage percentageminus">-1%</p>
@@ -185,7 +193,7 @@
                             </div>
                             <div class="title-container">
                                 <div class="tooltip">
-                                <p class="country">FR</p>
+                                    <p class="country">FR</p>
                                     <span class="tooltiptext">France</span>
                                 </div>
                                 <p class="percentage percentageminus">-8%</p>
@@ -194,7 +202,7 @@
                                 <div class="FRcolumn bottomcolumn"></div>
                             </div>
                         </div>
-                        <div class="data">
+                        <div class="data js-total-column">
                             <div class="bar-container">
                                 <div class="TOTALcolumn topcolumn"></div>
                             </div>
@@ -203,6 +211,7 @@
                                 <p class="percentage percentageplus">+11%</p>
                             </div>
                             <div class="bar-container">
+                                <div class="bottomcolumn"></div>
                             </div>
                         </div>
                     </div>
@@ -218,20 +227,39 @@
                         </div>
                     </div>
                     <div class="button">
-                        <div class="notification"><a href="#">1</a></div>
-                        <a href="#" class="redbutton">CLOSE</a>
+                        <a href="#" class="redbutton">
+                            <span class="notification">1</span>
+                            CLOSE
+                        </a>
                     </div>
+
+                </div>
+                <!-- Green section of the dropdown  -->
+
+                <div class="greensection">
+                    <div class="topography"><img src="images/topography@3x.png"></div>
+                    <div class="greentext"><p>The flight booking data indicates the level of demand from key inbound
+                        markets for the week of 17 Jul-23 Jul as of 12 Jul 17.</p></div>
+                    <div class="plane">
+                        <img class="tablet-plane" src="images/big-plane@3x.png"></div>
+                    <div class="poweredfooter">
+                        <div class="poweredby"><p>Powered by</p></div>
+                        <div class="forwardkeys"><img src="images/forward-keys-logo.png"></div>
+                    </div>
+                    <div class="planeshadow"><img src="images/small-plane@3x.png"></div>
+                    <div class="cloud"><img src="images/cloud-footer@3x.png"></div>
+                </div>
             </section>
 
-        <!-- article section -->
+            <!-- article section -->
 
-        <section class="article-container">
-            <div class="title"><p>Top Stories</p></div>
-            <div class="article-image"><img src="https://via.placeholder.com/250x150"></div>
-            <div class="article-text"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p></div>
-        </section>
+            <section class="article-container">
+                <div class="title"><p>Top Stories</p></div>
+                <div class="article-image"><img src="https://via.placeholder.com/250x150"></div>
+                <div class="article-text"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                    inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p></div>
+            </section>
 
     </main>
 
